@@ -2,5 +2,13 @@
 name = "varset"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.56"
+authors = ["sugmaboy<jjmartinodev@outlook.com>"]
+readme = "README.md"
+license-file = "LICENSE"
+description = "an any type set of items"
+repository = "https://github.com/jjmartinodev/varset"
+keywords = ["any", "set"]
+categories = ["data-structures"]
 
 [dependencies]
