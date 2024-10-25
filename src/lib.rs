@@ -40,6 +40,9 @@ impl VarSet {
             None
         }
     }
+    pub fn contains<T: Any>(&self) -> bool {
+        self.items.contains_key(&TypeId::of::<T>())
+    }
 }
 
 #[cfg(test)]
