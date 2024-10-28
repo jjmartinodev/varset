@@ -13,6 +13,12 @@ impl VarSet {
             items: HashMap::new(),
         }
     }
+    pub fn raw_map(&self) -> &HashMap<TypeId, Box<dyn Any>> {
+        &self.items
+    }
+    pub fn mut_raw_map(&mut self) -> &mut HashMap<TypeId, Box<dyn Any>> {
+        &mut self.items
+    }
     pub fn insert<T: Any>(&mut self, item: T) {
         if self.items.contains_key(&TypeId::of::<T>()) {
             panic!("tried to insert an already existing value")
